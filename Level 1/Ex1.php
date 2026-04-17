@@ -1,0 +1,34 @@
+<?php
+class worker{
+    private $name;
+    private $salary;
+
+    function setDetails($name, $salary){
+        $this->name = $name;
+        $this->salary = $salary;
+    }
+
+    function showTaxInfo(){
+        echo $this->name;
+        if($this->salary > 6000){
+            echo " has to pay taxes <br>";
+        } else {
+            echo " doesn't have to pay taxes <br>";
+        }
+    }
+
+}
+//Testing
+$Manolo = new worker();
+$Manolo->setDetails('Manolo', '180000');
+$Manolo->showTaxInfo();
+
+$Pedro = new worker();
+$Pedro->setDetails('Pedro', '4000');
+$Pedro->showTaxInfo();
+
+
+/*
+Crea una classe que representi un empleat, amb atributs referits al seu nom i sou. Defineix un mètode que rebi com a paràmetres el nom i el sou. Planteja un segon mètode que imprimeixi el nom i un missatge que mostri si ha de pagar o no impostos (si el sou en supera 6000, paga impostos).
+*/
+?>
